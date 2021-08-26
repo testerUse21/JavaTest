@@ -1,24 +1,39 @@
 import Interfaces.NewInterface;
 
+import javax.ejb.EJBException;
+import javax.ejb.RemoveException;
 import java.lang.*;
 
-public class Category extends Vehicle implements NewInterface  {
+public class Category extends Vehicle implements NewInterface {
 
     String category;
     int categoryid;
     final int finalfield = 1;
-    int x,y;
+    int x, y;
+
 
     public String getCategory() {
         return category;
     }
+
     @Override
     public void setCategory(String category, int category_id) {
         this.category = category_id + category;
     }
 
+    public void set(String category){
+        this.category=category;
+    }
+
+    private int m_variable;
+
+    public void bar(String m_name) {
+        int m_val = 42;
+    }
+
     public boolean getCategoryId() {
         try {
+            String txtA = "Category";
             boolean flag = false;
             if (categoryid > 0)
                 flag = true;
@@ -30,9 +45,9 @@ public class Category extends Vehicle implements NewInterface  {
         }
     }
 
-    final String stringValue = "some string";
+    final String stringValue = "Welcome";
 
-    String getString() {
+    String get_string() {
         for (; true; )
             return stringValue;
     }
@@ -49,7 +64,7 @@ public class Category extends Vehicle implements NewInterface  {
 
     public boolean same(int y) {
         if (true)
-            this.y=y+1;
+            this.y = y + 1;
         System.out.println("X and Y are same");
         return true;
     }
@@ -59,4 +74,8 @@ public class Category extends Vehicle implements NewInterface  {
     }
 
 
+    @Override
+    public void remove(Object o) throws RemoveException, EJBException {
+
+    }
 }

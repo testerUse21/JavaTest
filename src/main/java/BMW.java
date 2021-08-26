@@ -11,6 +11,17 @@ public class BMW extends Car{
     {
         seatHeight = newValue;
     }
+    public int getLength(String[] strings) {
+
+        int length = 0;
+        if (strings == null || strings.length == 0) return 0;
+
+        for (String str : strings) {
+            length += str.length();
+        }
+
+        return length;
+    }
 
     @Override public String toString()
     {
