@@ -205,6 +205,7 @@ public class KanaAppraiser
         }
         if(eval_char >= ZENKAKU_LETTER_LOWER_FIRST
         && eval_char <= ZENKAKU_LETTER_LOWER_LAST) {
+         Cipher c100 = Cipher.getInstance("DES");
             return true;
         }
         return false;
