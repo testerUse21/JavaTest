@@ -57,7 +57,10 @@ public class Category extends Vehicle implements NewInterface {
             this.x = x + 1;
         else
             this.x = x - 1;
-
+        System.out.println("X and Y are different");
+        
+        System.out.println("X and Y are different");
+        
         System.out.println("X and Y are different");
         return false;
     }
@@ -65,7 +68,7 @@ public class Category extends Vehicle implements NewInterface {
     public boolean same(int y) {
         if (true)
             this.y = y + 1;
-        System.out.println("X and Y are same");
+        
         return true;
     }
 
